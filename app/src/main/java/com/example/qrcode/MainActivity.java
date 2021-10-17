@@ -14,11 +14,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = findViewById(R.id.my_information);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button buttonInfo = findViewById(R.id.my_information);
+        buttonInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent myInfoIntent = new Intent(getApplicationContext(), MyInfoActivity.class);
+                startActivity(myInfoIntent);
+            }
+        });
+
+        Button buttonTransfer = findViewById(R.id.money_transfer);
+        buttonTransfer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myInfoIntent = new Intent(getApplicationContext(), MoneyTransferActivity.class);
                 startActivity(myInfoIntent);
             }
         });

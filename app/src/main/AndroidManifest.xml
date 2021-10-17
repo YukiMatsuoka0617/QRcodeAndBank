@@ -9,11 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QRcode">
-        <activity android:name=".QRCodeActivity"
-            android:exported="true"></activity>
-        <activity android:name=".MyInfoActivity"
-            android:exported="true"/>
-        <activity android:name=".MainActivity"
+        <activity android:name=".MoneyTransferActivity"></activity>
+        <activity
+            android:name=".QRCodeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MyInfoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

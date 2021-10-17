@@ -18,7 +18,8 @@ public class MyInfoActivity extends AppCompatActivity {
     private EditText mAccountNumberEditText;
     private EditText mAccountHolderEditText;
 
-    private static final String SEPARATOR = "/";
+    public static final String SEPARATOR = "/";
+    public static final String HEADER = "qr_code";
     public static final String QR_CODE = "QRCode";
 
     @Override
@@ -35,7 +36,8 @@ public class MyInfoActivity extends AppCompatActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String qrCodeString = mBankNameEditText.getText().toString() + SEPARATOR +
+                String qrCodeString = HEADER + SEPARATOR +
+                        mBankNameEditText.getText().toString() + SEPARATOR +
                         mBankBranchNameEditText.getText().toString() + SEPARATOR +
                         mAccountNumberEditText.getText().toString() + SEPARATOR +
                         mAccountHolderEditText.getText().toString();
